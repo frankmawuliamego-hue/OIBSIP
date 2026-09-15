@@ -1,0 +1,503 @@
+/* =========================================================
+   GENERAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #222;
+    background: #f5f2ec;
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+    background: #171717;
+    color: white;
+    padding: 0 8%;
+    overflow: hidden;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #ddd;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    min-height: calc(100vh - 90px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 70px;
+}
+
+
+/* HERO TEXT */
+
+.hero-text {
+    max-width: 600px;
+}
+
+.small-title {
+    color: #d4af37;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(60px, 8vw, 110px);
+    line-height: 0.95;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #d4af37;
+}
+
+.hero-description {
+    max-width: 550px;
+    color: #cfcfcf;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 13px 25px;
+
+    background: #d4af37;
+    color: #171717;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: white;
+}
+
+
+/* HERO IMAGE */
+
+.hero-image {
+    width: 42%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-frame {
+    width: min(420px, 100%);
+    position: relative;
+}
+
+.image-frame::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border: 2px solid #d4af37;
+
+    top: 18px;
+    left: 18px;
+
+    z-index: 0;
+}
+
+.image-frame img {
+    width: 110%;
+    height: 110%;
+    display: block;
+
+    position: relative;
+    z-index: 1;
+
+    filter: grayscale(15%);
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+.section {
+    padding: 100px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-heading p {
+    color: #b28b18;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+    background: #f5f2ec;
+}
+
+.about-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+}
+
+.about-intro {
+    border-left: 4px solid #d4af37;
+    padding-left: 25px;
+}
+
+.number {
+    font-size: 14px;
+    color: #b28b18;
+    font-weight: 600;
+}
+
+.about-intro h3 {
+    font-size: 34px;
+    line-height: 1.25;
+    margin: 15px 0 20px;
+}
+
+.about-intro p {
+    color: #666;
+}
+
+.about-text {
+    color: #555;
+}
+
+.about-text p {
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline-section {
+    background: #202020;
+    color: white;
+}
+
+.light-heading p {
+    color: #d4af37;
+}
+
+.timeline {
+    max-width: 900px;
+    margin: auto;
+
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 100px;
+    top: 0;
+    bottom: 0;
+
+    width: 2px;
+
+    background: #555;
+}
+
+.timeline-item {display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 45px;
+
+    margin-bottom: 45px;
+
+    position: relative;
+}
+
+.year {
+    color: #d4af37;
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.timeline-card {
+    background: #2b2b2b;
+    padding: 25px 30px;
+
+    border-left: 3px solid #d4af37;
+
+    transition: 0.3s;
+}
+
+.timeline-card:hover {
+    transform: translateX(5px);
+}
+
+.timeline-card h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.timeline-card p {
+    color: #c7c7c7;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.quote-section {
+    background: #d4af37;
+    color: #171717;
+
+    padding: 100px 8%;
+}
+
+.quote-content {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.quote-mark {
+    font-family: "Playfair Display", serif;
+    font-size: 90px;
+    height: 60px;
+    line-height: 1;
+}
+
+blockquote {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(30px, 5vw, 50px);
+    line-height: 1.3;
+
+    margin: 25px 0;
+}
+
+.quote-author {
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #111;
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+footer h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+footer span {
+    color: #777;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .hero {
+        padding: 0 6%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding: 70px 0;
+        gap: 60px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image {
+        width: 70%;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .timeline::before {
+        left: 70px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 70px 1fr;
+        gap: 25px;
+    }
+
+    .year {
+        font-size: 19px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .navbar {
+        height: 70px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content {
+        min-height: calc(100vh - 70px);
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero-image {
+        width: 85%;
+    }
+
+    .section {
+        padding: 70px 6%;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        display: block;
+    }
+
+    .year {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .timeline-card {
+        padding: 20px;
+    }
+
+    blockquote {
+        font-size: 30px;
+    }
+
+}
