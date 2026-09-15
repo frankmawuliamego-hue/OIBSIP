@@ -1,0 +1,316 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    color: #333;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #777;
+}
+
+
+/* =========================
+   ADD TASK
+========================= */
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 13px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+.task-input input:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.task-input button {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 7px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.task-input button:hover {
+    background: #555;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.task-section {
+    margin-bottom: 35px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-header h2 {
+    font-size: 21px;
+}
+
+.section-header span {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   TASK LIST
+========================= */
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================
+   TASK
+========================= */
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 15px;
+
+    margin-bottom: 10px;
+
+    background: #f8f9fa;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+}
+
+
+/* Task information */
+
+.task-info {
+    flex: 1;
+}
+
+.task-text {
+    font-size: 16px;
+    word-break: break-word;
+}
+
+
+/* Timestamp */
+
+.task-time {
+    display: block;
+    margin-top: 5px;
+
+    font-size: 12px;
+    color: #888;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.task-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.task-actions button {
+    border: none;
+    padding: 8px 11px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+
+/* Complete */
+
+.complete-btn {
+    background: #333;
+    color: white;
+}
+
+.complete-btn:hover {
+    background: #555;
+}
+
+
+/* Edit */
+
+.edit-btn {
+    background: #e0e0e0;
+    color: #333;
+}
+
+.edit-btn:hover {
+    background: #ccc;
+}
+
+
+/* Delete */
+
+.delete-btn {
+    background: #d9534f;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c9302c;
+}
+
+
+/* Save */
+
+.save-btn {
+    background: #333;
+    color: white;
+}
+
+
+/* Cancel */
+
+.cancel-btn {
+    background: #aaa;
+    color: white;
+}
+
+
+/* =========================
+   INLINE EDIT
+========================= */
+
+.edit-input {
+    width: 100%;
+    padding: 8px;
+
+    border: 1px solid #aaa;
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   COMPLETED TASK
+========================= */
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-message {
+    text-align: center;
+    padding: 20px;
+
+    color: #999;
+    font-size: 14px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    .task-input button {
+        width: 100%;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .task-actions {
+        width: 100%;
+    }
+
+    .task-actions button {
+        flex: 1;
+    }
+}
